@@ -28,12 +28,15 @@
     </style>
 </head>
 <body>
-    <script>
-        alert("Hello world");
-    </script>
+    <h1 id="demo">Bonjour</h1>
     <div class="container">
         <h1>Bienvenue sur ma page web</h1>
         <p>Ceci est une page web simple créée avec HTML et CSS.</p>
     </div>
 </body>
+<script>
+    // permet de chercher l'élemnt ayant l'id demo
+    document.getElementById("demo").innerHTML = "Didi";
+    // alert("Hello world");
+</script>
 </html>

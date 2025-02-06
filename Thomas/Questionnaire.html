@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sondage sur les Profs</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <div class="container mx-auto p-8">
+        <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Sondage sur les Profs</h1>
+
+        <form id="sondageForm" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <div class="mb-4">
+                <label for="meilleur_prof" class="block text-gray-700 text-sm font-bold mb-2">Quel est le meilleur prof ?</label>
+                <div class="relative">
+                    <select id="meilleur_prof" name="meilleur_prof" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        <option value="">Sélectionnez...</option>
+                        <option value="Fabrice">Fabrice</option>
+                        <option value="Dany">Dany</option>
+                        <option value="Rose">Rose</option>
+                        <option value="Hugo">Hugo</option>
+                        <option value="Morrad">Morrad</option>
+                        <option value="Patrick">Patrick</option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label for="sous_frozen" class="block text-gray-700 text-sm font-bold mb-2">Qui est le plus sous frozen ?</label>
+                <div class="relative">
+                    <select id="sous_frozen" name="sous_frozen" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        <option value="">Sélectionnez...</option>
+                        <option value="Fabrice">Fabrice</option>
+                        <option value="Dany">Dany</Dany>
+                        <option value="Rose">Rose</Rose>
+                        <option value="Hugo">Hugo</Hugo>
+                        <option value="Morrad">Morrad</Morrad>
+                        <option value="Patrick">Patrick</Patrick>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label for="en_retard" class="block text-gray-700 text-sm font-bold mb-2">Qui est le plus en retard ?</label>
+                <div class="relative">
+                    <select id="en_retard" name="en_retard" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        <option value="">Sélectionnez...</option>
+                        <option value="Fabrice">Fabrice</Fabrice>
+                        <option value="Dany">Dany</Dany>
+                        <option value="Rose">Rose</Rose>
+                        <option value="Hugo">Hugo</Hugo>
+                        <option value="Morrad">Morrad</Morrad>
+                        <option value="Patrick">Patrick</Patrick>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label for="aigri" class="block text-gray-700 text-sm font-bold mb-2">Qui est le plus aigri ?</label>
+                <div class="relative">
+                    <select id="aigri" name="aigri" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        <option value="">Sélectionnez...</option>
+                        <option value="Fabrice">Fabrice</Fabrice>
+                        <option value="Dany">Dany</Dany>
+                        <option value="Rose">Rose</Rose>
+                        <option value="Hugo">Hugo</Hugo>
+                        <option value="Morrad">Morrad</Morrad>
+                        <option value="Patrick">Patrick</Patrick>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <label for="gentil" class="block text-gray-700 text-sm font-bold mb-2">Qui est le plus gentil ?</label>
+                <div class="relative">
+                    <select id="gentil" name="gentil" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        <option value="">Sélectionnez...</option>
+                        <option value="Fabrice">Fabrice</Fabrice>
+                        <option value="Dany">Dany</Dany>
+                        <option value="Rose">Rose</Rose>
+                        <option value="Hugo">Hugo</Hugo>
+                        <option value="Morrad">Morrad</Morrad>
+                        <option value="Patrick">Patrick</Patrick>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-6">
+                <label for="bizarre" class="block text-gray-700 text-sm font-bold mb-2">Qui est le plus bizarre ?</label>
+                <div class="relative">
+                    <select id="bizarre" name="bizarre" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        <option value="">Sélectionnez...</option>
+                        <option value="Fabrice">Fabrice</Fabrice>
+                        <option value="Dany">Dany</Dany>
+                        <option value="Rose">Rose</Rose>
+                        <option value="Hugo">Hugo</Hugo>
+                        <option value="Morrad">Morrad</Morrad>
+                        <option value="Patrick">Patrick</Patrick>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" onclick="afficherResultats()">
+                    Voir les résultats
+                </button>
+            </div>
+        </form>
+
+        <div id="resultats" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 hidden">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Résultats</h2>
+            <p id="resultatsText" class="text-gray-700"></p>
+        </div>
+    </div>
+
+    <script>
+        function afficherResultats() {
+            const meilleurProf = document.getElementById("meilleur_prof").value;
+            const sousFrozen = document.getElementById("sous_frozen").value;
+            const enRetard = document.getElementById("en_retard").value;
+            const aigri = document.getElementById("aigri").value;
+            const gentil = document.getElementById("gentil").value;
+            const bizarre = document.getElementById("bizarre").value;
+
+
+            let resultatText = `
+                Meilleur prof : ${meilleurProf || "Pas de réponse"} <br>
+                Le plus sous frozen : ${sousFrozen || "Pas de réponse"} <br>
+                Le plus en retard : ${enRetard || "Pas de réponse"} <br>
+                Le plus aigri : ${aigri || "Pas de réponse"} <br>
+                Le plus gentil : ${gentil || "Pas de réponse"} <br>
+                Le plus bizarre : ${bizarre || "Pas de réponse"}
+            `;
+
+            document.getElementById("resultatsText").innerHTML = resultatText;
+            document.getElementById("resultats").classList.remove("hidden");
+        }
+
+        // Initialement, cacher la section des résultats
+        //document.getElementById("resultats").style.display = "none"; //DEPRECATED : Tailwind remplace par la class "hidden" dans l'HTML
+    </script>
+
+</body>
+</html>
