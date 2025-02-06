@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOMOWWW</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="radio"], input[type="number"] {
+            margin-right: 5px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            display: block;
+            margin-top: 10px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        button:hover {
+            background-color: #3e8e41;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 20px;
+            font-style: italic;
+            color: #777;
+        }
+
+        .question {
+            margin-bottom: 15px;
+        }
+
+        #resultat {
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>MOMOWWW</h1>
+
+    <form id="quizForm">
+        <p>Êtes-vous MOMOWWW sexuel ?  Répondez à ces questions étranges pour le découvrir !</p>
+
+        <div class="question">
+            <label>1. Si MOMOWWW était un bruit, lequel serait-ce ?</label><br>
+            <input type="radio" id="bruit_miaou" name="bruit" value="miaou">
+            <label for="bruit_miaou">Miaou</label><br>
+            <input type="radio" id="bruit_klaxon" name="bruit" value="klaxon">
+            <label for="bruit_klaxon">Klaxon</label><br>
+            <input type="radio" id="bruit_silence" name="bruit" value="silence">
+            <label for="bruit_silence">Silence absolu</label>
+        </div>
+
+        <div class="question">
+            <label>2. Quelle est la couleur de votre aura MOMOWWW ?</label><br>
+            <input type="radio" id="aura_magenta" name="aura" value="magenta">
+            <label for="aura_magenta">Magenta phosphorescent</label><br>
+            <input type="radio" id="aura_beige" name="aura" value="beige">
+            <label for="aura_beige">Beige poussière</label><br>
+            <input type="radio" id="aura_invisible" name="aura" value="invisible">
+            <label for="aura_invisible">Invisible (comme MOMOWWW lui-même)</label>
+        </div>
+
+        <div class="question">
+            <label>3. Sur une échelle de 1 à 10, à quel point MOMOWWW aime-t-il les cornichons ?</label><br>
+            <input type="number" id="cornichons" name="cornichons" min="1" max="10" value="5">
+        </div>
+
+        <div class="question">
+            <label>4. Si MOMOWWW était un vêtement, ce serait :</label><br>
+            <input type="radio" id="vetement_chaussette" name="vetement" value="chaussette">
+            <label for="vetement_chaussette">Une chaussette trouée</label><br>
+            <input type="radio" id="vetement_cravate" name="vetement" value="cravate">
+            <label for="vetement_cravate">Une cravate à motifs de dinosaures</label><br>
+            <input type="radio" id="vetement_rien" name="vetement" value="rien">
+            <label for="vetement_rien">Rien, MOMOWWW est toujours nu</label>
+        </div>
+
+        <div class="question">
+            <label>5. Quel est le plus grand secret de MOMOWWW ? (Ne le répétez à personne !)</label><br>
+            <textarea id="secret" name="secret" rows="4" cols="50"></textarea>
+        </div>
+
+        <button type="submit">Calculer mon pourcentage de MOMOWWW sexualité !</button>
+    </form>
+
+    <div id="resultat"></div>
+
+    <p>Disclaimer: Ce questionnaire est uniquement à des fins humoristiques. Le pourcentage de "MOMOWWW sexualité" est totalement aléatoire et ne doit pas être pris au sérieux. MOMOWWW vous aime, même si vous n'aimez pas les cornichons.</p>
+
+    <script>
+        document.getElementById("quizForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Empêche la soumission par défaut du formulaire
+
+            // Récupérer les valeurs des réponses
+            const bruit = document.querySelector('input[name="bruit"]:checked');
+            const aura = document.querySelector('input[name="aura"]:checked');
+            const cornichons = parseInt(document.getElementById("cornichons").value);
+            const vetement = document.querySelector('input[name="vetement"]:checked');
+            const secret = document.getElementById("secret").value;
+
+            // Calculer le "pourcentage" (totalement arbitraire !)
+            let pourcentage = 0;
+
+            if (bruit && bruit.value === "miaou") pourcentage += 15;
+            if (bruit && bruit.value === "klaxon") pourcentage += 5;
+            if (aura && aura.value === "magenta") pourcentage += 20;
+            if (aura && aura.value === "invisible") pourcentage += 10;
+            pourcentage += cornichons * 2; // Les cornichons comptent beaucoup !
+            if (vetement && vetement.value === "rien") pourcentage += 30;
+
+            // Ajuster le pourcentage pour qu'il soit entre 0 et 100
+            pourcentage = Math.max(0, Math.min(100, pourcentage));
+
+            // Afficher le résultat
+            document.getElementById("resultat").innerHTML = "Votre pourcentage de MOMOWWW sexualité est de : <strong>" + pourcentage.toFixed(2) + "%</strong> !";
+
+            //Optionnel:  Un message basé sur le résultat
+            let message = "";
+            if (pourcentage > 80) {
+                message = "Vous êtes un(e) MOMOWWW lover invétéré(e) !";
+            } else if (pourcentage > 50) {
+                message = "Vous avez un certain penchant pour MOMOWWW, c'est indéniable.";
+            } else {
+                message = "MOMOWWW n'est peut-être pas votre tasse de thé, mais il vous aime quand même !";
+            }
+            document.getElementById("resultat").innerHTML += "<br>" + message;
+
+        });
+    </script>
+</body>
+</html>
