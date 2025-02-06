@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sondage sur les Profs</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        select {
+            padding: 5px;
+            font-size: 16px;
+        }
+        #resultats {
+            margin-top: 30px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sondage sur les Profs</h1>
+
+    <form id="sondageForm">
+        <div class="question">
+            <label for="meilleur_prof">Quel est le meilleur prof ?</label>
+            <select id="meilleur_prof" name="meilleur_prof">
+                <option value="">Sélectionnez...</option>
+                <option value="Fabrice">Fabrice</option>
+                <option value="Dany">Dany</option>
+                <option value="Rose">Rose</option>
+                <option value="Hugo">Hugo</option>
+                <option value="Morrad">Morrad</option>
+                <option value="Patrick">Patrick</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label for="sous_frozen">Qui est le plus sous frozen ?</label>
+            <select id="sous_frozen" name="sous_frozen">
+                <option value="">Sélectionnez...</option>
+                <option value="Fabrice">Fabrice</option>
+                <option value="Dany">Dany</option>
+                <option value="Rose">Rose</option>
+                <option value="Hugo">Hugo</option>
+                <option value="Morrad">Morrad</option>
+                <option value="Patrick">Patrick</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label for="en_retard">Qui est le plus en retard ?</label>
+            <select id="en_retard" name="en_retard">
+                <option value="">Sélectionnez...</option>
+                <option value="Fabrice">Fabrice</option>
+                <option value="Dany">Dany</option>
+                <option value="Rose">Rose</option>
+                <option value="Hugo">Hugo</option>
+                <option value="Morrad">Morrad</option>
+                <option value="Patrick">Patrick</option>
+            </select>
+        </div>
+
+        <div class="question">
+            <label for="aigri">Qui est le plus aigri ?</label>
+            <select id="aigri" name="aigri">
+                <option value="">Sélectionnez...</option>
+                <option value="Fabrice">Fabrice</option>
+                <option value="Dany">Dany</option>
+                <option value="Rose">Rose</Rose>
+                <option value="Hugo">Hugo</Hugo>
+                <option value="Morrad">Morrad</Morrad>
+                <option value="Patrick">Patrick</Patrick>
+            </select>
+        </div>
+
+        <div class="question">
+            <label for="gentil">Qui est le plus gentil ?</label>
+            <select id="gentil" name="gentil">
+                <option value="">Sélectionnez...</option>
+                <option value="Fabrice">Fabrice</Fabrice>
+                <option value="Dany">Dany</Dany>
+                <option value="Rose">Rose</Rose>
+                <option value="Hugo">Hugo</Hugo>
+                <option value="Morrad">Morrad</Morrad>
+                <option value="Patrick">Patrick</Patrick>
+            </select>
+        </div>
+
+        <div class="question">
+            <label for="bizarre">Qui est le plus bizarre ?</label>
+            <select id="bizarre" name="bizarre">
+                <option value="">Sélectionnez...</option>
+                <option value="Fabrice">Fabrice</Fabrice>
+                <option value="Dany">Dany</Dany>
+                <option value="Rose">Rose</Rose>
+                <option value="Hugo">Hugo</Hugo>
+                <option value="Morrad">Morrad</Morrad>
+                <option value="Patrick">Patrick</Patrick>
+            </select>
+        </div>
+
+        <button type="button" onclick="afficherResultats()">Voir les résultats</button>
+    </form>
+
+    <div id="resultats">
+        <h2>Résultats</h2>
+        <p id="resultatsText"></p>
+    </div>
+
+    <script>
+        function afficherResultats() {
+            const meilleurProf = document.getElementById("meilleur_prof").value;
+            const sousFrozen = document.getElementById("sous_frozen").value;
+            const enRetard = document.getElementById("en_retard").value;
+            const aigri = document.getElementById("aigri").value;
+            const gentil = document.getElementById("gentil").value;
+            const bizarre = document.getElementById("bizarre").value;
+
+
+            let resultatText = `
+                Meilleur prof : ${meilleurProf || "Pas de réponse"} <br>
+                Le plus sous frozen : ${sousFrozen || "Pas de réponse"} <br>
+                Le plus en retard : ${enRetard || "Pas de réponse"} <br>
+                Le plus aigri : ${aigri || "Pas de réponse"} <br>
+                Le plus gentil : ${gentil || "Pas de réponse"} <br>
+                Le plus bizarre : ${bizarre || "Pas de réponse"}
+            `;
+
+            document.getElementById("resultatsText").innerHTML = resultatText;
+            document.getElementById("resultats").style.display = "block"; // Afficher la section des résultats
+        }
+
+        // Initialement, cacher la section des résultats
+        document.getElementById("resultats").style.display = "none";
+    </script>
+
+</body>
+</html>
