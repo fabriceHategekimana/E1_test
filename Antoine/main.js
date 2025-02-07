@@ -1,3 +1,4 @@
+function sondage () {
 let a = prompt("Vous allez bien ? ( oui | non )");
             if (a === "oui") {
                 alert("Parfait")
@@ -9,6 +10,10 @@ let a = prompt("Vous allez bien ? ( oui | non )");
                 alert("Je ne suis pas sur d'avoir compris")
                 console.log(alert)
             }
+        }
 
 
-            document.getElementById('demo').innerHTML = "Javascript";
+        document.getElementById('demo').onclick = console.log(sondage());
+
+
+
