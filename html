@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone de X (Twitter)</title>
+    <link rel="stylesheet" href="css x ( twiter).css">
+</head>
+<body>
+    <header>
+        <h1>Clone de X</h1>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#">🏠 Accueil</a></li>
+                    <li><a href="#">🔍 Recherche</a></li>
+                    <li><a href="#" id="profile-btn">👤 Profils</a></li>
+                    <li><a href="#">⚙️ Paramètres</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main>
+            <section id="feed">
+                <input type="text" id="search" placeholder="Rechercher un post...">
+                <section id="new-post">
+                    <textarea id="post-content" placeholder="Quoi de neuf ?" maxlength="280"></textarea>
+                    <input type="file" id="post-image" accept="image/*">
+                    <button id="post-btn">Publier</button>
+                </section>
+                <section id="posts"></section>
+            </section>
+            <aside class="right-sidebar">
+                <h2>Profils suggérés</h2>
+                <ul id="profile-list">
+                    <li><a href="#" class="profile-link" data-user="1">@Genshin player</a></li>
+                    <li><a href="#" class="profile-link" data-user="2">@fonfon85</a></li>
+                    <li><a href="#" class="profile-link" data-user="3">@toxic tweeter</a></li>
+                </ul>
+            </aside>
+        </main>
+        <section id="profile-view" class="hidden">
+            <button id="close-profile">❌ Fermer</button>
+            <div id="profile-content"></div>
+        </section>
+    </div>
+    <script src="java x ( twiter).js"></script>
+</body>
+</html>
